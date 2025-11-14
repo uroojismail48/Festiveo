@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Festivals |Festiveo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./asset/e-project.css">
+
+    <style>
+        .festival-findernational {
+            padding: 50px 0;
+
+          
+        }
+
+        .finder-controls select{
+                    padding: 8px;
+            border-radius: 7px;
+            margin-top: 30px;
+            border: 1px solid #dddddd42;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header >
+        <nav class="navbar navbar-expand-sm"
+            style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);">
+            <div class="container">
+                <a class="navbar-brand text text-light" href="#"><img src="./asset/image/logo.png" alt=""
+                        style="height: 50px; ">Festiveo</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0 gap-3">
+                        <li class="nav-item"><a class="nav-link active text text-light" style="margin-left: 70px;" href="home.html"
+                              aria-current="page">Home<span class="visually-hidden">(current)</span></a></li>
+                        <li class="nav-item"><a class="nav-link text text-light" href="Contact us.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text text-light" href="National Festivals.html" id="dropdownId"
+                               >Festivals</a>
+                       
+                       
+                        </li>
+                        <li class="nav-item"><a class="nav-link text text-light" href="Gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link text text-light" href="About Us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link text text-light" href="Feedback.html">Feedback </a></li>
+                    </ul>
+                    <form class="d-flex my-2 my-lg-0 gap-2">
+                       <a href="login.HTML" class="btn btn-5"
+                         type="submit">Log-in</a>
+                        <a href="Membership.html" class="btn btn-5" type="submit">Membership</a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1> Festivals Around the World</h1>
+                <p>
+                    Explore the world’s most iconic cultural celebrations with Festiveo!
+                </p>
+            </div>
+        </section>
+
+        <section class="festival-findernational" id="festival-filter">
+            <div class="container">
+                <p class="finder-sub text-white">Discover festivals by region, season, or theme!</p>
+
+                <div class="finder-controls d-flex gap-3 flex-wrap justify-content-center">
+
+                    <input type="text" id="searchfes" placeholder="Search by name..." />
+
+                    <select id="main-filter">
+                        <option value="">Select Category</option>
+                        <option value="country">National (Country)</option>
+                        <option value="religion">Religious</option>
+                        <option value="province">Cultural (Province)</option>
+                        <option value="seasonal">Seasonal</option>
+                    </select>
+
+                    <div id="country-filter-container" class="d-none">
+                        <select id="filter-country">
+                            <option value="">All Countries</option>
+                            <option value="PAKISTAN">PAKISTAN</option>
+                            <option value="INDIA">INDIA</option>
+                            <option value="CHINA">CHINA</option>
+                            <option value="BANGLADESH">BANGLADESH</option>
+                        </select>
+                    </div>
+
+                    <div id="religion-filter-container" class="d-none">
+                        <select id="filter-religion">
+                            <option value="">All Religions</option>
+                            <option value="ISLAM">ISLAM</option>
+                            <option value="HINDU">HINDU</option>
+                            <option value="CHRISTIANS">CHRISTIANS</option>
+                            <option value="BHUDISM">BHUDISM</option>
+                        </select>
+                    </div>
+
+                    <div id="province-filter-container" class="d-none">
+                        <select id="filter-province">
+                            <option value="">All Provinces</option>
+                            <option value="SINDH">SINDH</option>
+                            <option value="KPK">KPK</option>
+                            <option value="PUNJAB">PUNJAB</option>
+                            <option value="BALOCHISTAN">BALOCHISTAN</option>
+                        </select>
+                    </div>
+
+                    <div id="seasonal-filter-container" class="d-none">
+                        <select id="filter-seasonal">
+                            <option value="">All Seasons</option>
+                            <option value="SUMMER">SUMMER</option>
+                            <option value="WINTER">WINTER</option>
+                            <option value="AUTUMN">AUTUMN</option>
+                            <option value="SPRING">SPRING</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="festival-section container text-center">
+            <h2 class="mb-5 text-white fw-bold" id="topfes">All Festivals</h2>
+
+            <div class="row g-4" id="festival-cards-container">
+                <p class="text-white">Loading festivals...</p>
+            </div>
+
+            <div class="mt-5">
+                <a href="Membership.html">
+                <button class="btn-discover">Discover More Festivals</button>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mainfooter" style=" color: #fff; padding: 20px 0 ; margin-top: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class=" footerrow">
+                    <div class="col-12 col-md-4">
+                        <div class="footercol ">
+                            <img src="./asset/image/logo.png" alt="" style="height: 50px; ; ">Festiveo</a>
+                            <h6>
+                                <p>Celebrating cultures, colors, and connections across the world.Join us to explore
+                                    festivals, traditions, and joyful moments that unite us all. Follow Festiveo on
+                                    social media for daily festival vibes!Crafted with love and celebration </p>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="footercol ">
+                            <h3>link <div class="footerunderline"></div>
+                            </h3>
+                            <li class="footerli"><a href="home.html">Home</a></li>
+                            <li class="footerli"><a href="Contact us.html">Contact Us</a></li>
+                            <li class="footerli"><a href="Gallery.html">Gallery</a></li>
+                            <li class="footerli"><a href="About Us.html">About Us</li>
+                            <li class="footerli"><a href="Feedback.html">Feedback</a></li>
+                            <li class="footerli"><a href="Membership.html">Membership</a></li>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="footercol ">
+                            <h3>Message Us <div class="footerunderline"></div>
+                            </h3>
+                            <form class="footerfrom">
+                                <i class="fa-regular fa-envelope"></i>
+                                <input class="footerinput" type="email" placeholder="Enter your E-mail id" required>
+                                <button type="submit" class="footerbtn"><i class="fa-solid fa-arrow-right"></i></button>
+                            </form>
+                            <div class="footersocialicon">
+                                <a href="https://www.facebook.com/"> <i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.messenger.com/"><i class="fa-brands fa-facebook-messenger"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="x.com/username."><i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://www.pinterest.com"><i class="fa-brands fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footerhr">
+        <p class="footerend"> <img src="./asset/image/logo.png" alt="" style="height: 50px; ; ">Festiveo</a> 2025 - All
+            Right Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"
+        integrity="sha512-tQQXRDB2wEmuJGtFrmmoFYzNTq8StA1XJrfO0OQbbTxd9G0CwaTDL6/C1y805IlvBVrMwOqob1kf6r/2U5XXVg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<i>Cultural Festivals</i>'],
+            typeSpeed: 100,
+            loop: true,
+            loopCount: Infinity,
+        });
+    </script>
+    <script>
+
+        const ALL_FESTIVALS = [
+            // National
+            { title: "INDEPENDENCE DAY (14TH AUGUST)", country: "PAKISTAN", description: "Pakistan's Independence Day.", image: "./asset/image/festivals imgs/national/pakistan/Independence Day (14th August).jpg" },
+            { title: "DEFENCE DAY(6TH SEP)", country: "PAKISTAN", description: "Pakistan's Defence Day.", image: "./asset/image/festivals imgs/national/pakistan/DEFENCE DAY(6TH SEP).jpg" },
+            { title: "YOUM E TAKBEER(28TH MAY)", country: "PAKISTAN", description: "youm e takbeer Day.", image: "./asset/image/festivals imgs/national/pakistan/YOUM E TAKBEER(28TH MAY).jpg" },
+            { title: "REPUBLIC DAY (26TH JAN)", country: "INDIA", description: "Marks the date India's constitution came into effect.", image: "./asset/image/festivals imgs/national/india/INDEPENDENCE DAY (15TH AUGUST),.jpg" },
+            { title: "GANDHI JAYANTI (2ND OCT)", country: "INDIA", description: "Gandhi's birthday , inda's father.", image: "./asset/image/festivals imgs/national/india/GANDHI JAYANTI (2ND OCT).jpg" },
+            { title: "QINGMING (4TH APRIL)", country: "CHINA", description: "Tomb-Sweeping Day in China.", image: "./asset/image/festivals imgs/national/china/QINGMING (4TH APRIL).jpg" },
+            { title: "REPUBLIC DAY (1ST OCT )", country: "CHINA", description: "Founding of the People's Republic of China.", image: "./asset/image/festivals imgs/national/china/REPUBLIC DAY(1ST OCT ).jpg" },
+            { title: "EKUSHEY FEBRUARY (21ST FEB)", country: "BANGLADESH", description: "International Mother Language Day.", image: "./asset/image/festivals imgs/national/bangladesh/INDEPENDENCE DAY (26TH MARCH ),.jpg" },
+            { title: "VICTORY DAY (16TH DEC)", country: "BANGLADESH", description: "Victory Day commemorates Bangladesh’s triumph.", image: "./asset/image/festivals imgs/national/bangladesh/VICTORY DAY (16TH DEC),.jpg" },
+            // Religious
+            { title: "EID MILADUN NABI", religion: "ISLAM", description: "Birthday of Prophet Muhammad.", image: "./asset/image/festivals imgs/religious/islam/EID MILADUN NABI,.jpg" },
+            { title: "EID UL ADHA", religion: "ISLAM", description: "Festival of Sacrifice.", image: "./asset/image/festivals imgs/religious/islam/EID UL ADHA.jpg" },
+            { title: "EID-UL-FITR", religion: "ISLAM", description: "Marks the end of Ramadan.", image: "./asset/image/festivals imgs/religious/islam/Eid-ul-fitr.jpg" },
+            { title: "HOLI (MARCH)", religion: "HINDU", description: "Festival of colors.", image: "./asset/image/festivals imgs/religious/hindu/HOLI (MARCH).jpg" },
+            { title: "RAKSHA BHANDAN (AUGUST)", religion: "HINDU", description: "Festival celebrating the bond of love and protection.", image: "./asset/image/festivals imgs/religious/hindu/RAKSHA BHANDAN (AUGUST).jpg" },
+            { title: "CHRISTMAS (25TH DEC)", religion: "CHRISTIANS", description: "Celebrates the birth of Jesus Christ.", image: "./asset/image/festivals imgs/religious/christianity/christmas.jpg" },
+            { title: "Halloween (31st October)", religion: "CHRISTIANS", description: "A spooky celebration with costumes.", image: "./asset/image/festivals imgs/religious/christianity/helloween.jpg" },
+            { title: "DHARMA PUJA", religion: "BHUDISM", description: "Honoring the teachings of Buddha.", image: "./asset/image/festivals imgs/religious/bhudism/Vesak (Buddha Day).jpg" },
+
+            // Cultural (Province)
+
+
+            { title: "CHOPOLLO /MANGO FESTIVALS(MAY-JUNE)", province: "SINDH", description: "Celebrates the mango harvest.", image: "./asset/image/festivals imgs/regional/sindh/CHOPOLLO MANGO FESTIVALS(MAY-JUNE).jpg" },
+            { title: "UCHAL (AUGUST)", province: "KPK", description: "Uchal is a traditional Kalash festival in Pakistan’s Chitral Valley,.", image: "./asset/image/festivals imgs/regional/kpk/UCHAL (AUGUST).jpg" },
+            { title: "MELA CHIRGHAN (MARCH)", province: "PUNJAB", description: "Festival of Lights at Shah Hussain's shrine.", image: "./asset/image/festivals imgs/regional/punjab/MELA CHIRGHAN (MARCH).jpg" },
+            { title: "SIBI MELA (FEB-MARCH)", province: "BALOCHISTAN", description: "Major livestock and cultural event.", image: "./asset/image/festivals imgs/regional/balochistan/SIBI MELA (FEB-MARCH).jpg" },
+
+            // Seasonal
+            { title: "SWAT SUMMER FESTIVAL (JUNE - JULY)", seasonal: "SUMMER", description: "Promoting tourism in Swat Valley.", image: "./asset/image/festivals imgs/saeasonal/summer/SWAT SUMMER FESTIVAL (JUNE - JULY),.jpg" },
+            { title: "MURRE WINTER FESTIVAL (DEC-JAN)", seasonal: "WINTER", description: "Snow sports and cultural events in Murree.", image: "./asset/image/festivals imgs/saeasonal/winter/MURRE WINTER FESTIVAL(DEC-JAN).jpg" },
+            { title: "QUETTA WINTER FESTIVALS (DEC - FEB)", seasonal: "WINTER", description: "Balochistan’s winter celebration with snow sports.", image: "./asset/image/festivals imgs/saeasonal/winter/QUETTA WINTER FESTIVALS (DEC - FEB).jpg" },
+            { title: "SIBI AUTUMN FESTIVAL", seasonal: "AUTUMN", description: "A vibrant Balochistan festival celebrating culture.", image: "./asset/image/festivals imgs/saeasonal/autumn/SIBI AUTUMN FESTIVAL (NOV),.jpg" },
+            { title: "CHOLISTAN JEEP RELLY (LATE AUTUMN)", seasonal: "AUTUMN", description: "Annual desert rally race.", image: "./asset/image/festivals imgs/saeasonal/autumn/CHOLISTAN JEEP RELLY (LATE AUTUMN).jpg" },
+            { title: "CHERRY BLOSSOM FESTIVAL (MARCH-APRIL)", seasonal: "SPRING", description: "japanese festival celebrated in spring.", image: "./asset/image/festivals imgs/saeasonal/spring/CHERRY BLOSSOM FESTIVAL (MARCH-APRIL),.jpg" }
+
+        ];
+function createFestivalCard(festival) {
+  const country = festival.country || 'NONE';
+  const religion = festival.religion || 'NONE';
+  const province = festival.province || 'NONE';
+  const seasonal = festival.seasonal || 'NONE';
+  const displayCountry = country !== 'NONE' ? country : '';
+  const displayProvince = province !== 'NONE' ? ` / ${province}` : '';
+ const encodedTitle = encodeURIComponent(festival.title);
+  return `
+    <div class="col-md-4"
+      data-country="${country.toUpperCase()}"
+      data-religion="${religion.toUpperCase()}"
+      data-province="${province.toUpperCase()}"
+      data-seasonal="${seasonal.toUpperCase()}"
+    >
+      <div class="festival-card position-relative" style="height: 390px; overflow: hidden; border-radius: 15px;">
+        <img src="${festival.image}" alt="${festival.title}" style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+        
+        <!-- Overlay -->
+        <div class="festival-overlay d-flex flex-column justify-content-end p-3">
+          <h5 class="text-white fw-bold mb-1">${festival.title}</h5>
+          <p class="text-light small mb-1">${festival.description}</p>
+          <p class="text-info small">${displayCountry}${displayProvince}</p>
+             <button class="btn btn-outline-light btn-sm mt-2"
+            onclick="window.location.href='festival-detail.html?title=${encodedTitle}'">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+
+
+        function renderFestivalCards() {
+            const container = document.getElementById('festival-cards-container');
+            if (container) {
+                const cardsHtml = ALL_FESTIVALS.map(createFestivalCard).join('');
+                container.innerHTML = cardsHtml;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFestivalCards();
+
+            const searchInput = document.getElementById('searchfes');
+            const mainFilter = document.getElementById('main-filter');
+            const countryFilter = document.getElementById('filter-country');
+            const religionFilter = document.getElementById('filter-religion');
+            const provinceFilter = document.getElementById('filter-province');
+            const seasonalFilter = document.getElementById('filter-seasonal');
+
+            const filterContainers = {
+                country: document.getElementById('country-filter-container'),
+                religion: document.getElementById('religion-filter-container'),
+                province: document.getElementById('province-filter-container'),
+                seasonal: document.getElementById('seasonal-filter-container'),
+            };
+
+            const festivalContainer = document.querySelector('.festival-section .row');
+            const festivalCards = festivalContainer ? Array.from(festivalContainer.querySelectorAll('.col-md-4')) : [];
+
+            function toggleSubFilters() {
+                const selectedCategory = mainFilter.value;
+                Object.values(filterContainers).forEach(container => {
+                    container.classList.add('d-none');
+                    if (container.querySelector('select')) {
+                        container.querySelector('select').value = "";
+                    }
+                });
+
+                if (selectedCategory && filterContainers[selectedCategory]) {
+                    filterContainers[selectedCategory].classList.remove('d-none');
+                }
+
+                applyFilters();
+            }
+
+            function applyFilters() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+
+                let activeFilterValue = "";
+                let activeDataAttribute = "";
+
+                const selectedCategory = mainFilter.value;
+                if (selectedCategory === 'country') {
+                    activeFilterValue = countryFilter.value.toUpperCase().trim();
+                    activeDataAttribute = 'data-country';
+                } else if (selectedCategory === 'religion') {
+                    activeFilterValue = religionFilter.value.toUpperCase().trim();
+                    activeDataAttribute = 'data-religion';
+                } else if (selectedCategory === 'province') {
+                    activeFilterValue = provinceFilter.value.toUpperCase().trim();
+                    activeDataAttribute = 'data-province';
+                } else if (selectedCategory === 'seasonal') {
+                    activeFilterValue = seasonalFilter.value.toUpperCase().trim();
+                    activeDataAttribute = 'data-seasonal';
+                }
+                const currentFestivalCards = festivalContainer ? Array.from(festivalContainer.querySelectorAll('.col-md-4')) : [];
+
+                currentFestivalCards.forEach(card => {
+                    let isMatch = true;
+                    const cardTitle = card.querySelector('h5').textContent.toLowerCase();
+                    if (searchTerm && !cardTitle.includes(searchTerm)) {
+                        isMatch = false;
+                    }
+                    if (isMatch && activeDataAttribute && activeFilterValue) {
+                        const cardAttributeValue = card.getAttribute(activeDataAttribute) || 'NONE';
+
+                        if (activeFilterValue !== cardAttributeValue) {
+                            isMatch = false;
+                        }
+                    }
+
+                    card.style.display = isMatch ? 'block' : 'none';
+                });
+            }
+
+            mainFilter.addEventListener('change', toggleSubFilters);
+            countryFilter.addEventListener('change', applyFilters);
+            religionFilter.addEventListener('change', applyFilters);
+            provinceFilter.addEventListener('change', applyFilters);
+            seasonalFilter.addEventListener('change', applyFilters);
+            searchInput.addEventListener('input', applyFilters);
+            applyFilters();
+        });
+    </script>
+</body>
+
+</html>

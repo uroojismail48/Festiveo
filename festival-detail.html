@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festival Details|Festiveo</title>
+
+  <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="/asset/e-project.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+         background: radial-gradient(circle at top, #d8a443, #eb6949, #933fb9);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+            background-size: 200% 200%;
+      animation: bgMove 8s ease-in-out infinite;
+    
+    }
+      @keyframes bgMove {
+      0% { background-position: left top; }
+      50% { background-position: right bottom; }
+      100% { background-position: left top; }
+    }
+
+    h1 {
+      text-align: center;
+      margin: 50px 0 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .festival-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .festivall-card {
+      background: rgba(204, 189, 189, 0.212);
+      border-radius: 16px;
+      overflow: hidden;
+           box-shadow: 0 6px 18px rgba(141, 44, 14, 0.582);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .festivall-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgb(207, 52, 5);
+    }
+
+    .festivall-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .festival-content {
+      padding: 18px 20px;
+    }
+
+    .festival-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .festival-desc {
+      font-size: 0.95rem;
+      color: #f1e4e4;
+      line-height: 1.5;
+    }
+
+.btnn-discover{
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.205);
+  background-color: rgba(240, 248, 255, 0.233);
+  color: rgb(255, 192, 110) ;
+  font-weight: 600;
+  border-radius: 50px;
+  width: 250px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.mmm {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .mmm {
+    justify-content: center;   
+    margin-left: 0;          
+  }
+
+  .btnn-discover {
+    width: 80%;              
+    max-width: 300px;
+    text-align: center;
+  }
+}
+.mainfooter {
+      margin-top: 1300px;
+  width: 100%;
+  padding: 40px 0 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+}
+
+.mainfooter h3, 
+.mainfooter h6, 
+.mainfooter p, 
+.mainfooter li, 
+.mainfooter a {
+  color: #fff;
+}
+
+.mainfooter a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mainfooter a:hover {
+  color: #ffd479;
+}
+
+.footerhr {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footerend {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+.footpg{
+  height: 50px;
+}
+/* Responsive tweak */
+@media (max-width: 1000px) {
+  .mainfooter {
+    margin-top: 3500px;
+    text-align: center;
+  }
+
+  .mainfooter .col-md-4 {
+    margin-bottom: 20px;
+  }
+}
+
+.footerrow{
+    margin: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+ /* nav btn */
+ .btn-5 {
+    color: white;
+  border: 0 solid;
+  box-shadow: inset white;
+  outline: 1px solid;
+  outline-color: white;
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  margin-left: 10px;
+} 
+
+.btn-5:hover {
+    color: white;
+  border: 1px solid;
+  box-shadow: inset 0 0 20px white;
+  outline-color: white;
+  outline-offset: 5px;
+  text-shadow: 1px 1px 2px white; 
+}
+ /* nav btn */
+.footercol{
+    flex-basis: 25%;
+    padding: 10px;
+}
+ .footerli{
+    list-style: none;
+    margin-bottom: 12px;
+   
+ }
+ .footerli a{
+    text-decoration: none;
+    color: #fbf3ff;
+ }
+ .footerfrom{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid  #F9E9B1;
+    margin-bottom: 50px;
+ }
+ .footerfrom .fa{
+    font-size: 18px;
+    margin-right: 10px;
+
+ }
+ .footerinput{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+   border: 0;
+    outline: none;
+ }
+ .footerbtn{
+   background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+ }
+ .footerbtn .fa-solid{
+      font-size: 16px;
+      color: white;
+ }
+ .footersocialicon .fa-brands{
+    width: 30px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+ }
+ .footerhr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid white;
+    margin: 20px auto;
+ }
+ .footerend{
+    text-align: center;
+ }
+  </style>
+</head>
+<body>
+        <header style="margin-bottom: 50px;">
+           <!-- nav bar -->
+            <nav
+                
+                class="navbar navbar-expand-sm " style="background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);"
+            >
+                <div class="container">
+                    <a class="navbar-brand text text-light" href="#"  ><img src="./asset/image/logo.png" alt="" style="height: 50px; ">Festiveo</a>
+                    <button
+                        class="navbar-toggler d-lg-none"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId"
+                        aria-controls="collapsibleNavId"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                          <ul class="navbar-nav me-auto mt-2 mt-lg-0 gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link active text text-light" href="home.html" aria-current="page"
+                                    >Home
+                                    <span class="visually-hidden">(current)</span></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text text-light" href="Contact us.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link text text-light"
+                                    href="National Festivals.html"
+                                    
+                                    >Festivals</a
+                                >
+                                <div
+                                    class="dropdown-menu"
+                                    aria-labelledby="dropdownId"
+                                >
+                            <a class="dropdown-item " href="National Festivals.html"
+                                        >globalFestivals</a
+                                    >
+                                    <a class="dropdown-item" href="Regional Festivals.html"
+                                        >Religious Festivals</a
+                                        
+                                    >
+                                     <a class="dropdown-item" href="Seasonal festivals.html"
+                                        >Seasonal Festivals</a
+                                        
+                                    >
+                                     <a class="dropdown-item" href="Cultural festivals.html"
+                                        >Cultural Festivals</a
+                                        
+                                    >
+                                </div>
+                                <li class="nav-item">
+                                <a class="nav-link text text-light" href="Gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text text-light" href="About Us.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text text-light" href="Feedback.html">Feedback </a>
+                            </li>
+                        </li>
+                        </ul>
+                 <form class="d-flex my-2 my-lg-0 gap-2" >
+                     
+                            
+                          <a href="login.HTML" class="btn btn-5"
+                         type="submit">Log-in</a>
+                         <a href="Membership.html" class="btn btn-5"
+                                type="submit">Membership</a>
+                        
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            
+        </header>
+  <h1>All Festival Details</h1>
+
+  <section class="festival-section">
+
+    <!-- Example festival cards -->
+    <div class="festivall-card">
+      <img src="./asset/image/festivals imgs/national/pakistan/Independence Day (14th August).jpg" alt="">
+      <div class="festival-content">
+        <h3 class="festival-title">Independence Day (14th August)</h3>
+        <p class="festival-desc">Pakistan celebrates its independence with parades, flag hoisting, and fireworks to honor freedom and unity.</p>
+          <div class="mmm" style="margin-left: 30px; ">
+                <a href="Membership.html">
+                <button class="btnn-discover">Discover More </button>
+                </a>
+            </div>
+      </div>
+      
+          
+    </div>
+
+    <div class="festivall-card">
+      <img src="./asset/image/festivals imgs/national/pakistan/DEFENCE DAY(6TH SEP).jpg" alt="">
+      <div class="festival-content">
+        <h3 class="festival-title">Defence Day (6th September)</h3>
+        <p class="festival-desc">A day to commemorate the bravery of Pakistan’s armed forces who defended the nation in 1965.</p>
+                  <div class="mmm" style="margin-left: 30px; ">
+                <a href="Membership.html">
+                <button class="btnn-discover">Discover More </button>
+                </a>
+            </div>
+      </div>
+    </div>
+
+    <div class="festivall-card">
+      <img src="./asset/image/festivals imgs/national/china/QINGMING (4TH APRIL).jpg" alt="">
+      <div class="festival-content">
+        <h3 class="festival-title">Qingming (4th April)</h3>
+        <p class="festival-desc">Also known as Tomb-Sweeping Day, it is when families in China honor ancestors by cleaning graves and offering food.</p>
+                  <div class="mmm" style="margin-left: 30px; ">
+                <a href="Membership.html">
+                <button class="btnn-discover">Discover More </button>
+                </a>
+            </div>
+      </div>
+    </div>
+
+    <div class="festivall-card">
+      <img src="./asset/image/festivals imgs/national/bangladesh/VICTORY DAY (16TH DEC),.jpg" alt="">
+      <div class="festival-content">
+        <h3 class="festival-title">Victory Day (16th December)</h3>
+        <p class="festival-desc">Commemorates Bangladesh’s victory in the 1971 Liberation War, marking the birth of the nation.</p>
+                  <div class="mmm" style="margin-left: 30px; ">
+                <a href="Membership.html">
+                <button class="btnn-discover">Discover More </button>
+                </a>
+            </div>
+      </div>
+    </div>
+
+    <div class="festivall-card">
+      <img src="./asset/image/festivals imgs/religious/islam/Eid-ul-fitr.jpg" alt="">
+      <div class="festival-content">
+        <h3 class="festival-title">Eid-ul-Fitr</h3>
+        <p class="festival-desc">A joyful Islamic festival marking the end of Ramadan with prayers, charity, and family feasts.</p>
+                  <div class="mmm" style="margin-left: 30px; ">
+                <a href="Membership.html">
+                <button class="btnn-discover">Discover More </button>
+                </a>
+            </div>
+      </div>
+    </div>
+
+    <div class="festivall-card">
+      <img src="./asset/image/festivals imgs/religious/islam/EID UL ADHA.jpg" alt="">
+      <div class="festival-content">
+        <h3 class="festival-title">Eid-ul-Adha</h3>
+        <p class="festival-desc">Also called the “Festival of Sacrifice,” it honors Prophet Ibrahim’s devotion to God through communal prayers and feasts.</p>
+                  <div class="mmm" style="margin-left: 30px; ">
+                <a href="Membership.html">
+                <button class="btnn-discover">Discover More </button>
+                </a>
+            </div>
+      </div>
+    </div>
+
+    <div class="festivall-card">
+      <img src="./asset/image/festivals imgs/religious/hindu/RAKSHA BHANDAN (AUGUST).jpg" alt="">
+      <div class="festival-content">
+        <h3 class="festival-title">Raksha Bandhan (August)</h3>
+        <p class="festival-desc">A Hindu festival celebrating the bond between brothers and sisters, symbolized by tying a rakhi on the wrist.</p>
+                  <div class="mmm" style="margin-left: 30px; ">
+                <a href="Membership.html">
+                <button class="btnn-discover">Discover More </button>
+                </a>
+            </div>
+      </div>
+    </div>
+
+    <div class="festivall-card">
+      <img src="./asset/image/festivals imgs/religious/christianity/helloween.jpg" alt="">
+      <div class="festival-content">
+        <h3 class="festival-title">Halloween (31st October)</h3>
+        <p class="festival-desc">A fun-filled night of costumes, trick-or-treating, and spooky celebrations rooted in ancient Celtic traditions.</p>
+                  <div class="mmm" style="margin-left: 30px; ">
+                <a href="Membership.html">
+                <button class="btnn-discover">Discover More </button>
+                </a>
+            </div>
+      </div>
+    </div>
+
+    <div class="festivall-card">
+      <img src="./asset/image/festivals imgs/saeasonal/autumn/SIBI AUTUMN FESTIVAL (NOV),.jpg" alt="">
+      <div class="festival-content">
+        <h3 class="festival-title">Sibi Autumn Festival</h3>
+        <p class="festival-desc">A vibrant Balochistan festival showcasing local crafts, horse shows, and folk performances celebrating heritage.</p>
+                  <div class="mmm" style="margin-left: 30px; ">
+                <a href="Membership.html">
+                <button class="btnn-discover">Discover More </button>
+                </a>
+            </div>
+      </div>
+    </div>
+
+    <div class="festivall-card">
+      <img src="./asset/image/festivals imgs/regional/kpk/UCHAL (AUGUST).jpg" alt="">
+      <div class="festival-content">
+        <h3 class="festival-title">Uchal (August)</h3>
+        <p class="festival-desc">A Kalash harvest festival in Chitral Valley with dancing, singing, and offerings to thank the gods for the year’s yield.</p>
+                  <div class="mmm" style="margin-left: 30px; ">
+                <a href="Membership.html">
+                <button class="btnn-discover">Discover More </button>
+                </a>
+            </div>
+      </div>
+    </div>
+
+    <div class="festivall-card">
+      <img src="./asset/image/festivals imgs/saeasonal/winter/QUETTA WINTER FESTIVALS (DEC - FEB).jpg" alt="">
+      <div class="festival-content">
+        <h3 class="festival-title">Quetta Winter Festivals (Dec–Feb)</h3>
+        <p class="festival-desc">Celebrate Balochistan’s winter with snow sports, local music, crafts, and rich cultural performances.</p>
+                  <div class="mmm" style="margin-left: 30px; ">
+                <a href="Membership.html">
+                <button class="btnn-discover">Discover More </button>
+                </a>
+            </div>
+      </div>
+    </div>
+
+  </section>
+
+ <footer  class="mainfooter" style=" color: #fff; padding: 20px 0 ; margin-top: 50px;" >
+        <div class="container">
+            <div class="row">
+            <div class=" footerrow">
+                <div class="col-12 col-md-4">
+                    <div class="footercol ">                  
+                        <img src="./asset/image/logo.png" alt="" style="height: 50px; ; ">Festiveo</a>
+                        <h6> <p>Celebrating cultures, colors, and connections across the 
+                          world.Join us to explore festivals, traditions, and joyful moments that unite us all.
+                          Follow Festiveo on social media for daily festival vibes!Crafted with
+                           love and celebration </p></h6>
+                     </div>
+                </div>
+                <div class="col-12 col-md-4">
+                <div class="footercol "><h3>link  <div class="footerunderline"></div></h3>
+                    <li class="footerli"><a href="home.html">Home</a></li>
+                    <li class="footerli"><a href="Contact us.html">Contact Us</a></li>
+                    <li class="footerli"><a href="Gallery.html">Gallery</a></li>
+                    <li class="footerli"><a href="About Us.html">About Us</li>
+                    <li class="footerli"><a href="Feedback.html">Feedback</a></li>
+                    <li class="footerli"><a href="Membership.html">Membership</a></li>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="footercol "><h3>Message Us <div class="footerunderline"></div></h3>
+                    <form class="footerfrom">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input class="footerinput" type="email" placeholder="Enter your E-mail id" required>
+                        <button type="submit" class="footerbtn"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                    <div class="footersocialicon">
+                        <a href="https://www.facebook.com/"> <i class="fa-brands fa-facebook" ></i></a>
+                        <a href="https://www.messenger.com/"><i class="fa-brands fa-facebook-messenger"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="x.com/username."><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.pinterest.com"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <hr  class="footerhr">
+        <p class="footerend"> <img src="./asset/image/logo.png" alt="" style="height: 50px; ; ">Festiveo</a>  2025   - All Right Reserved</p>
+        </footer>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous">
+</script>
+</body>
+</html>

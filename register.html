@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | Festiveo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background: radial-gradient(circle at top left, #d8a443, #eb6949, #933fb9);
+      background-size: 200% 200%;
+      animation: moveBg 8s ease-in-out infinite;
+      color: #fff;
+    }
+
+    @keyframes moveBg {
+      0% {
+        background-position: left top;
+      }
+
+      50% {
+        background-position: right bottom;
+      }
+
+      100% {
+        background-position: left top;
+      }
+    }
+
+    .register-box {
+      width: 400px;
+      padding: 40px 30px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .register-box h2 {
+      font-weight: 600;
+      font-size: 28px;
+
+    }
+
+    .register-input {
+      position: relative;
+      text-align: left;
+ 
+    }
+
+    .register-input input {
+      width: 100%;
+      padding: 12px 45px 12px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .register-input input:focus {
+      border-color: #ff8b6a;
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .register-input input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .toggle-password {
+      position: absolute;
+      top: 34%;
+      right: 15px;
+      transform: translateY(-50%);
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .toggle-password:hover {
+      color: #fff;
+    }
+
+    .message {
+      font-size: 13px;
+      margin-top: 4px;
+      min-height: 16px;
+      color: #ffdede;
+    }
+
+    .register-btn {
+      width: 100%;
+      padding: 12px;
+      margin-top: 14px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(45deg, #ee0979, #ff6a00);
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .register-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 106, 0, 0.3);
+    }
+
+    .register-bottom-text {
+      margin-top: 18px;
+      font-size: 14px;
+    }
+
+    .register-bottom-text a {
+      color: #f5b7a6;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 6px;
+      letter-spacing: 1px;
+    }
+
+    .register-bottom-text a:hover {
+      text-decoration: underline;
+    }
+
+    @media(max-width:430px) {
+      .register-box {
+        width: 90%;
+        padding: 30px 20px;
+      }
+    }
+
+    /* Home + footer */
+    .home-btn-container {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .home-btn {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .home-btn:hover {
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 13px;
+      text-align: center;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="home-btn-container">
+    <button class="home-btn" onclick="goHome()"><i class="fa-solid fa-house"></i> Home</button>
+  </div>
+
+  <div class="register-box">
+    <h2>Create Account</h2>
+    <div id="mainmessage" class="message"></div>
+
+    <div class="register-input">
+      <input type="text" placeholder="Full Name" id="register-name" required>
+      <div id="namemessage" class="message"></div>
+    </div>
+
+    <div class="register-input">
+      <input type="email" placeholder="Email" id="register-email" required>
+      <div id="emailmessage" class="message"></div>
+    </div>
+
+    <div class="register-input">
+      <input type="password" placeholder="Password" id="register-password" required>
+      <i class="fa-solid fa-eye toggle-password" id="togglePassword1"></i>
+      <div id="passmessage" class="message"></div>
+    </div>
+
+    <div class="register-input">
+      <input type="password" placeholder="Confirm Password" id="register-confirm-password" required>
+      <i class="fa-solid fa-eye toggle-password" id="togglePassword2"></i>
+      <div id="confirmpassmessage" class="message"></div>
+    </div>
+
+    <button class="register-btn" onclick="register()">Register</button>
+
+    <div class="register-bottom-text">
+      Already have an account? <a href="login.html">Login</a>
+    </div>
+  </div>
+
+  <footer class="footer">© 2025 Festiveo. All rights reserved.</footer>
+
+  <script>
+    const togglePassword1 = document.getElementById('togglePassword1');
+    const togglePassword2 = document.getElementById('togglePassword2');
+    const password1 = document.getElementById('register-password');
+    const password2 = document.getElementById('register-confirm-password');
+
+    [togglePassword1, togglePassword2].forEach((toggle, idx) => {
+      toggle.addEventListener('click', () => {
+        const input = idx === 0 ? password1 : password2;
+        input.type = input.type === 'password' ? 'text' : 'password';
+        toggle.classList.toggle('fa-eye');
+        toggle.classList.toggle('fa-eye-slash');
+      });
+    });
+
+    function register() {
+      const name = document.getElementById("register-name").value.trim();
+      const email = document.getElementById("register-email").value.trim();
+      const pass = password1.value.trim();
+      const cpass = password2.value.trim();
+      const nameMsg = document.getElementById("namemessage");
+      const emailMsg = document.getElementById("emailmessage");
+      const passMsg = document.getElementById("passmessage");
+      const confirmMsg = document.getElementById("confirmpassmessage");
+      const mainMsg = document.getElementById("mainmessage");
+      nameMsg.textContent = emailMsg.textContent = passMsg.textContent = confirmMsg.textContent = mainMsg.textContent = "";
+
+      if (!name || !email || !pass || !cpass) {
+        if (!name) nameMsg.textContent = "Please enter your name.";
+        if (!email) emailMsg.textContent = "Please enter your email.";
+        if (!pass) passMsg.textContent = "Please enter a password.";
+        if (!cpass) confirmMsg.textContent = "Please confirm your password.";
+        return;
+      }
+      if (pass.length < 8) { passMsg.textContent = "Password must be at least 8 characters."; return; }
+      if (!/[A-Z]/.test(pass) || !/[!@#$%^&*()]/.test(pass)) {
+        passMsg.textContent = "Password must include 1 capital & 1 special character."; return;
+      }
+      if (pass !== cpass) { confirmMsg.textContent = "Passwords do not match."; return; }
+
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      if (users.some(u => u.email === email)) { emailMsg.textContent = "Email already registered."; return; }
+      users.push({ name, email, password: pass });
+      localStorage.setItem("users", JSON.stringify(users));
+
+      mainMsg.textContent = "Registration successful!";
+      mainMsg.style.color = "#a4ffb2";
+      setTimeout(() => { window.location.href = "home.html"; }, 1500);
+    }
+    function goHome() { window.location.href = "home.html"; }
+  </script>
+</body>
+
+</html>
